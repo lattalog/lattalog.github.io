@@ -227,6 +227,87 @@ header#home > * {
 .legal-page h1 {
   margin-bottom: 20px;
 }
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  /* Navigation */
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .n-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* HERO */
+  #hero {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .h-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .h-sub {
+    font-size: 14px;
+  }
+
+  .h-btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* KPI Boxen */
+  .h-kpis {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Grid Services */
+  .svc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Vorteile Liste */
+  .adv-layout {
+    flex-direction: column;
+  }
+
+  /* Nummern Boxen */
+  .num-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .num-card {
+    text-align: center;
+  }
+
+  /* Kontakt */
+  .contact-layout {
+    flex-direction: column;
+  }
+
+  .f-row {
+    flex-direction: column;
+  }
+
+  /* Footer */
+  .f-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
 
 .legal-page h2 {
   margin-top: 30px;
