@@ -1,0 +1,18 @@
+Email senden von Webseite:
+
+https://formspree.io/
+email: latta.moh@gmail.com
+
+passwort: Mohamad1mr@@
+
+unter Anfrage bearbeiten (<!-- ################### Anfragen bearbeiten ##################### -->)
+
+Die ID anpassen !!!
+
+
+
+Webseite ist hosted bei Github Pages:
+
+username: lattalog
+email: latta.moh@gmail.com
+passwort: wie oben
