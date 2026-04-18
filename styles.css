@@ -227,88 +227,78 @@ header#home > * {
 .legal-page h1 {
   margin-bottom: 20px;
 }
-/* ===== MOBILE FIX ===== */
-@media (max-width: 768px) {
-
-  /* Navigation */
-  nav {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-  }
-
-  .n-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* HERO */
-  #hero {
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .hero-left {
-    width: 100%;
-  }
-
-  .h-title {
-    font-size: 28px;
-    line-height: 1.2;
-  }
-
-  .h-sub {
-    font-size: 14px;
-  }
-
-  .h-btns {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* KPI Boxen */
-  .h-kpis {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* Grid Services */
-  .svc-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Vorteile Liste */
-  .adv-layout {
-    flex-direction: column;
-  }
-
-  /* Nummern Boxen */
-  .num-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  .num-card {
-    text-align: center;
-  }
-
-  /* Kontakt */
-  .contact-layout {
-    flex-direction: column;
-  }
-
-  .f-row {
-    flex-direction: column;
-  }
-
-  /* Footer */
-  .f-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-}
 
 .legal-page h2 {
   margin-top: 30px;
+}
+/* verhindert Layout-Brüche */
+* {
+  box-sizing: border-box;
+}
+
+/* verhindert seitliches Scrollen */
+html, body {
+  overflow-x: hidden;
+}
+/* ===== MOBILE FIXES ===== */
+
+/* Hamburger-Button */
+.n-toggle{
+  display:none;background:none;border:none;
+  color:#fff;font-size:1.5rem;cursor:pointer;
+  padding:.25rem .5rem;line-height:1;
+}
+
+@media(max-width:900px){
+
+  /* Nav */
+  .n-toggle{display:block}
+  .n-links{
+    display:none;flex-direction:column;
+    position:fixed;top:62px;left:0;right:0;
+    background:rgba(14,15,17,.97);
+    padding:1rem 0 1.5rem;z-index:199;
+    border-bottom:1px solid rgba(255,255,255,.1)
+  }
+  .n-links.open{display:flex}
+  .n-links a{
+    line-height:1;padding:.85rem 1.5rem;
+    border-bottom:none;font-size:1rem
+  }
+  .n-cta{
+    margin:.5rem 1.5rem 0!important;
+    padding:.65rem 1.2rem!important;
+    text-align:center;border-radius:8px!important
+  }
+
+  /* Hero */
+  .hero-left{padding:7rem 5vw 3rem}
+  .h-title{font-size:2.2rem}
+  .h-kpis{flex-wrap:wrap;gap:1.2rem}
+  .kpi{border-right:none!important;padding:0!important}
+
+  /* Sections */
+  .sec{padding:3.5rem 5vw}
+  .adv-layout{gap:2rem}
+  .about-layout{gap:2rem}
+  .contact-layout{gap:2rem}
+
+  /* Formular */
+  .f-row{grid-template-columns:1fr}
+  .c-form{padding:1.5rem 1.1rem}
+
+  /* Footer */
+  .f-grid{grid-template-columns:1fr;gap:1.5rem}
+  .f-bottom{flex-direction:column;align-items:flex-start;gap:.25rem}
+}
+
+@media(max-width:560px){
+  .svc-grid{grid-template-columns:1fr}
+  .num-grid{grid-template-columns:1fr 1fr}
+  .h-title{font-size:1.9rem}
+  .cert-row{flex-direction:column}
+  .h-btns{flex-direction:column}
+  .btn-a,.btn-b{text-align:center}
+  .p-chips{gap:.5rem}
+  .p-chip{font-size:.8rem;padding:.5rem 1rem}
 }

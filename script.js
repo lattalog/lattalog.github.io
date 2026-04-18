@@ -55,4 +55,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Hamburger-Menü (Mobile Navigation)
+    const toggle = document.getElementById('navToggle');
+    const links = document.querySelector('.n-links');
+    if (toggle && links) {
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('open');
+            toggle.textContent = links.classList.contains('open') ? '✕' : '☰';
+        });
+        document.querySelectorAll('.n-links a').forEach(a =>
+            a.addEventListener('click', () => {
+                links.classList.remove('open');
+                toggle.textContent = '☰';
+            })
+        );
+    }
+
 });
