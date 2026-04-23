@@ -1,34 +1,22 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-
-:root{
-  --ink:#0e0f11;--steel:#1c2333;--slate:#2d3748;--ash:#8892a4;
-  --silver:#c8d0dc;--fog:#f2f4f7;--white:#ffffff;
-  --amber:#e8a020;--amber2:#c88a10;--accent:#2a6ef5;
-  --border:#dde2ea;--r:8px;
-}
-
+:root{--ink:#0e0f11;--steel:#1c2333;--slate:#2d3748;--ash:#8892a4;--silver:#c8d0dc;--fog:#f2f4f7;--white:#ffffff;--amber:#e8a020;--amber2:#c88a10;--accent:#2a6ef5;--border:#dde2ea;--r:8px}
 html{scroll-behavior:smooth}
 body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden}
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-thumb{background:var(--amber);border-radius:99px}
 
-/* NAVIGATION */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;height:62px;
-  display:flex;justify-content:space-between;align-items:center;
-  padding:0 4vw;
-  background:rgba(14,15,17,.94);backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:62px;display:flex;justify-content:space-between;align-items:center;padding:0 4vw;background:rgba(14,15,17,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
 .n-logo{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;letter-spacing:1.5px;color:#fff;text-transform:uppercase}
 .n-logo b{color:var(--amber)}
+#navToggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:0 .5rem}
 .n-links{display:flex;gap:0;list-style:none}
 .n-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.4px;padding:0 1.1rem;line-height:62px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
 .n-links a:hover{color:#fff;border-color:var(--amber)}
 .n-cta{background:var(--amber)!important;color:var(--ink)!important;padding:.45rem 1.2rem!important;line-height:62px!important;border-radius:var(--r);font-weight:700!important;border-bottom:none!important;margin-left:.75rem}
 .n-cta:hover{background:var(--amber2)!important}
 
-/* HERO SECTION */
+/* HERO - desktop unchanged */
 #hero{min-height:100vh;position:relative;display:grid;grid-template-columns:1fr 1fr;background:var(--ink);overflow:hidden}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:8rem 3vw 5rem 5vw;position:relative;z-index:2}
 #hero::after{content:'';position:absolute;top:0;right:calc(50% - 80px);bottom:0;width:160px;background:var(--ink);clip-path:polygon(100% 0,100% 100%,0 100%,55% 0);z-index:1}
@@ -41,7 +29,6 @@ nav{
 .h-pill{display:inline-flex;align-items:center;gap:.4rem;background:rgba(232,160,32,.12);border:1px solid rgba(232,160,32,.35);color:var(--amber);padding:.28rem .85rem;border-radius:99px;font-size:.72rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:1.6rem}
 .h-pill::before{content:'●';font-size:.48rem;animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-
 .h-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.9rem,3.2vw,3rem);font-weight:800;line-height:1.07;color:#fff;text-transform:uppercase;letter-spacing:.5px;margin-bottom:1.3rem}
 .h-title em{font-style:normal;color:var(--amber)}
 .h-sub{font-size:.97rem;color:rgba(255,255,255,.58);max-width:440px;margin-bottom:2.2rem;font-weight:300;line-height:1.78}
@@ -50,7 +37,6 @@ nav{
 .btn-a:hover{background:var(--amber2);transform:translateY(-2px)}
 .btn-b{background:transparent;color:#fff;padding:.75rem 1.7rem;border-radius:var(--r);font-weight:500;font-size:.88rem;text-decoration:none;border:1.5px solid rgba(255,255,255,.22);transition:border-color .2s,transform .2s;display:inline-block}
 .btn-b:hover{border-color:#fff;transform:translateY(-2px)}
-
 .h-kpis{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.09);padding-top:1.75rem}
 .kpi{flex:1;padding-right:1.4rem;border-right:1px solid rgba(255,255,255,.07)}
 .kpi:last-child{border-right:none;padding-right:0;padding-left:1.4rem}
@@ -66,7 +52,7 @@ nav{
 .ticker span{font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--ink);padding:0 2rem}
 .ticker span::after{content:'·';margin-left:2rem;opacity:.35}
 
-/* GENERAL SECTIONS */
+/* SECTIONS */
 .sec{padding:5.5rem 4vw}
 .sec-inner{max-width:1120px;margin:0 auto}
 .eyebrow{font-size:.68rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--amber);margin-bottom:.55rem;display:flex;align-items:center;gap:.45rem}
@@ -74,7 +60,7 @@ nav{
 .sec-h{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;text-transform:uppercase;color:var(--ink);line-height:1.08;margin-bottom:.65rem}
 .sec-p{font-size:.95rem;color:var(--ash);max-width:540px;line-height:1.75;margin-bottom:2.75rem}
 
-/* LEISTUNGEN CARDS */
+/* LEISTUNGEN */
 #leistungen{background:var(--fog)}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
 .svc-card{background:#fff;border-radius:var(--r);padding:1.85rem 1.6rem;border:1px solid var(--border);position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
@@ -95,7 +81,7 @@ nav{
 .p-chip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.5);font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:1px;padding:.6rem 1.5rem;border-radius:6px;text-transform:uppercase;transition:background .2s,color .2s}
 .p-chip:hover{background:rgba(232,160,32,.12);color:var(--amber)}
 
-/* VORTEILE & PERFORMANCE */
+/* VORTEILE */
 #vorteile{background:#fff}
 .adv-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
 .adv-list{list-style:none;margin-top:.5rem}
@@ -104,16 +90,6 @@ nav{
 .adv-num{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:800;color:var(--amber);min-width:2.2rem;line-height:1;margin-top:.1rem}
 .adv-row h4{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink);margin-bottom:.2rem}
 .adv-row p{font-size:.86rem;color:var(--ash);line-height:1.65}
-.perf-panel{background:var(--steel);border-radius:12px;padding:2.25rem;position:sticky;top:5rem}
-.perf-panel h4{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.35);margin-bottom:1.6rem}
-.p-stat{margin-bottom:1.35rem}
-.p-row{display:flex;justify-content:space-between;margin-bottom:.38rem}
-.p-label{font-size:.82rem;color:rgba(255,255,255,.55)}
-.p-val{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;color:#fff}
-.p-track{background:rgba(255,255,255,.08);border-radius:99px;height:5px;overflow:hidden}
-.p-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--amber));width:0;transition:width 1.3s ease-out}
-.fleet-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.75rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.08)}
-.fleet-tag{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.65);font-size:.76rem;font-weight:600;padding:.35rem .8rem;border-radius:6px}
 
 /* ÜBER UNS */
 #ueber-uns{background:var(--fog)}
@@ -127,7 +103,7 @@ nav{
 .num-card .big em{color:var(--amber);font-style:normal}
 .num-card small{font-size:.77rem;color:var(--ash)}
 
-/* KONTAKT FORMULAR */
+/* KONTAKT */
 #kontakt{background:#fff}
 .contact-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:start;margin-top:2.25rem}
 .c-info h3{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink);margin-bottom:1.35rem}
@@ -162,132 +138,45 @@ footer{background:var(--ink);color:rgba(255,255,255,.42);padding:3rem 4vw 1.75re
 .f-col p{font-size:.77rem;line-height:1.65;margin-top:.4rem}
 .f-bottom{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;font-size:.75rem}
 
-/* REVEAL ANIMATIONS */
+/* REVEAL */
 [data-r]{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
 [data-r].on{opacity:1;transform:none}
 [data-r="d1"]{transition-delay:.12s}
 [data-r="d2"]{transition-delay:.24s}
 
-/* RESPONSIVE DESIGN */
-/* Suche die @media(max-width:900px) Sektion und ergänze/ersetze: */
+/* LEGAL */
+.legal-page{max-width:900px;margin:100px auto;padding:20px;line-height:1.6}
+.legal-page h1{margin-bottom:20px}
+.legal-page h2{margin-top:30px}
 
+/* ===== MOBILE - max 900px ===== */
 @media(max-width:900px){
-  nav { padding: 0 5vw; }
-  
-  /* Hamburger Button Stylen */
-  #navToggle {
-    display: block;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    order: 2;
-  }
+  nav{padding:0 5vw}
+  #navToggle{display:block}
+  .n-links{display:none;flex-direction:column;position:absolute;top:62px;left:0;right:0;background:rgba(14,15,17,.98);padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .n-links.open{display:flex}
+  .n-links a{line-height:50px;width:100%;text-align:center}
+  .n-cta{margin:10px 5vw !important;line-height:40px !important}
 
-  .n-links {
-    display: none; /* Standardmäßig ausblenden */
-    flex-direction: column;
-    position: absolute;
-    top: 62px;
-    left: 0;
-    right: 0;
-    background: rgba(14,15,17,.98);
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border);
-  }
+  /* Hero: single column, hide right panel completely */
+  #hero{grid-template-columns:1fr !important}
+  #hero::after{display:none !important}
+  .hero-right{display:none !important}
+  .hero-left{padding:7rem 6vw 4rem}
 
-  .n-links.open {
-    display: flex; /* Einblenden wenn JS Klasse toggelt */
-  }
-
-  .n-links a {
-    line-height: 50px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .n-cta {
-    margin: 10px 5vw !important;
-    line-height: 40px !important;
-  }
-}
-@media(max-width:600px){
-  .hero-left {
-    padding: 6rem 5vw 3rem; /* Weniger Padding oben/unten */
-  }
-  
-  .h-title {
-    font-size: 1.8rem; /* Titel etwas kleiner für sehr schmale Handys */
-  }
-
-  .h-kpis {
-    flex-direction: column; /* Zahlen untereinander statt nebeneinander */
-    gap: 1rem;
-  }
-
-  .kpi, .kpi:not(:first-child):not(:last-child), .kpi:last-child {
-    padding: 0;
-    border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,.07);
-    padding-bottom: 1rem;
-  }
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .adv-layout{grid-template-columns:1fr;gap:2rem}
+  .about-layout{grid-template-columns:1fr;gap:2.5rem}
+  .contact-layout{grid-template-columns:1fr;gap:2rem}
+  .f-grid{grid-template-columns:1fr;gap:2rem}
 }
 
-
-header#home {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background-image: url('background.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background: (0, 0, 0, 0.3);
-
-  color: white;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-/* dunkles Overlay für Lesbarkeit (Standard Logistik-Look) */
-header#home::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* Stärke hier ändern */
-  z-index: 1;
-}
-
-header#home > * {
-  position: relative;
-  z-index: 2;
-}
-/* Einstellungen für Rechliche Seiten wie AGB, Datenschutz, Impressum */
-.legal-page {
-  max-width: 900px;
-  margin: 100px auto;
-  padding: 20px;
-  line-height: 1.6;
-}
-
-.legal-page h1 {
-  margin-bottom: 20px;
-}
-
-.legal-page h2 {
-  margin-top: 30px;
-}
-/* verhindert Layout-Brüche */
-* {
-  box-sizing: border-box;
-}
-
-/* verhindert seitliches Scrollen */
-html, body {
-  overflow-x: hidden;
+/* ===== MOBILE - max 500px ===== */
+@media(max-width:500px){
+  .svc-grid{grid-template-columns:1fr}
+  .f-row{grid-template-columns:1fr}
+  .h-title{font-size:2rem}
+  .h-pill::before{content:''}
+  .h-kpis{flex-direction:column;gap:1rem}
+  .kpi,.kpi:not(:first-child):not(:last-child),.kpi:last-child{padding:0 0 1rem 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}
 }
