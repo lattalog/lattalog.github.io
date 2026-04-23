@@ -1,169 +1,78 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<!-- =======================
-     HEAD / META INFORMATION
-     PURPOSE:
-     - SEO
-     - Performance (fonts preload)
-     - responsive behavior
-======================= -->
 <head>
   <meta charset="UTF-8"/>
-
-  <!-- Mobile responsiveness (CRITICAL) -->
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-  <!-- SEO TITLE (primary ranking factor) -->
   <title>Latta Logistik UG – Subunternehmer Logistik Salzgitter</title>
-
-  <!-- SEO DESCRIPTION (search snippets) -->
   <meta name="description" content="Latta Logistik UG – Zuverlässiger Logistik-Subunternehmer in Salzgitter. Paket- und Tourenlieferungen für KEP-Dienstleister in Niedersachsen."/>
-
-  <!-- SEO KEYWORDS (low impact but harmless) -->
   <meta name="keywords" content="Subunternehmer Logistik Salzgitter, KEP Subunternehmer Niedersachsen, Zustellpartner DHL GLS, Pakettransport Salzgitter"/>
-
-  <!-- PERFORMANCE: Preconnect for faster font loading -->
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- TYPOGRAPHY: External font system -->
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- MAIN STYLESHEET -->
+  
   <link rel="stylesheet" href="styles.css">
 </head>
-
-
 <body>
 
-<!-- =======================
-     NAVIGATION (FIXED HEADER)
-     NOTE:
-     - JS dependency: #navToggle
-     - mobile menu handled via script.js
-======================= -->
 <nav role="banner">
-
-  <!-- Brand / Logo -->
   <div class="n-logo">Latta <b>Logistik</b></div>
-
-  <!-- Mobile toggle button (JS required) -->
-  <button id="navToggle">☰</button>
-
-  <!-- Main navigation links -->
+  <button id="navToggle" aria-label="Menü öffnen">☰</button>
   <ul class="n-links">
     <li><a href="#leistungen">Leistungen</a></li>
     <li><a href="#vorteile">Warum wir</a></li>
     <li><a href="#ueber-uns">Über uns</a></li>
-
-    <!-- CTA link (conversion target) -->
     <li><a href="#kontakt" class="n-cta">Anfrage senden</a></li>
   </ul>
 </nav>
 
-
-<!-- =======================
-     HERO SECTION (MAIN LANDING)
-     PURPOSE:
-     - first impression
-     - conversion entry point
-======================= -->
 <section id="hero">
-
-  <!-- LEFT CONTENT (text + CTA) -->
   <div class="hero-left">
-
-    <!-- Badge / Context label -->
     <div class="h-pill">Subunternehmer · Salzgitter & Region</div>
-
-    <!-- Main headline -->
-    <h1 class="h-title">
-      Zuverlässige<br>Zustellung –<br><em>jede Tour.</em>
-    </h1>
-
-    <!-- Supporting text -->
-    <p class="h-sub">
-      Latta Logistik UG übernimmt Paket- und Tourenlieferungen für KEP-Dienstleister in Niedersachsen. Pünktlich, dokumentiert und skalierbar.
-    </p>
-
-    <!-- CTA buttons -->
+    <h1 class="h-title">Zuverlässige<br>Zustellung –<br><em>jede Tour.</em></h1>
+    <p class="h-sub">Latta Logistik UG übernimmt Paket- und Tourenlieferungen für KEP-Dienstleister in Niedersachsen. Pünktlich, dokumentiert und skalierbar.</p>
     <div class="h-btns">
       <a href="#kontakt" class="btn-a">Kooperation anfragen</a>
       <a href="#leistungen" class="btn-b">Leistungen ansehen</a>
     </div>
-
-    <!-- KPI BLOCK (metrics) -->
     <div class="h-kpis">
-
       <div class="kpi">
         <div class="kpi-n">2<span>+</span></div>
         <div class="kpi-l">Fahrzeuge</div>
       </div>
-
       <div class="kpi">
         <div class="kpi-n">24<span>h</span></div>
         <div class="kpi-l">Reaktionszeit</div>
       </div>
+    </div>
+  </div>
+
+  <div class="hero-right" aria-hidden="true">
+    <div class="hero-right-bg"></div>
+    <div class="hero-svg-wrap">
 
     </div>
   </div>
 
-  <!-- RIGHT VISUAL AREA (background only) -->
   <div class="hero-right" aria-hidden="true">
-
-    <!-- Background image layer -->
     <div class="hero-right-bg"></div>
-
-    <!-- Reserved for future SVG / animation -->
     <div class="hero-svg-wrap"></div>
-
   </div>
 </section>
 
-
-<!-- =======================
-     SCROLLING TRUST TICKER
-     PURPOSE:
-     - social proof
-     - keywords repetition (SEO side effect)
-======================= -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-inner">
-
-    <!-- duplicated intentionally for infinite scroll effect -->
     <span>Pünktliche Zustellung</span><span>Letzte Meile</span><span>Salzgitter</span><span>Niedersachsen</span><span>KEP-Partner</span><span>Zuverlässig</span><span>Tourenübernahme</span><span>Paketlogistik</span><span>Subunternehmer</span>
-
     <span>Pünktliche Zustellung</span><span>Letzte Meile</span><span>Salzgitter</span><span>Niedersachsen</span><span>KEP-Partner</span><span>Zuverlässig</span><span>Tourenübernahme</span><span>Paketlogistik</span><span>Subunternehmer</span>
-
   </div>
 </div>
 
-
-<!-- =======================
-     SERVICES SECTION
-     PURPOSE:
-     - service breakdown
-     - structured offerings
-======================= -->
 <section id="leistungen" class="sec">
-
   <div class="sec-inner">
-
     <div class="eyebrow" data-r>Was wir leisten</div>
-
-    <h2 class="sec-h" data-r>
-      Unsere Leistungen<br>für Ihren Betrieb
-    </h2>
-
-    <p class="sec-p" data-r>
-      Wir übernehmen Touren kurzfristig und langfristig – mit eigenem Fahrzeug, geschultem Fahrer und klarer Rückmeldung.
-    </p>
-
-    <!-- SERVICE GRID -->
+    <h2 class="sec-h" data-r>Unsere Leistungen<br>für Ihren Betrieb</h2>
+    <p class="sec-p" data-r>Wir übernehmen Touren kurzfristig und langfristig – mit eigenem Fahrzeug, geschultem Fahrer und klarer Rückmeldung.</p>
     <div class="svc-grid">
-
-      <!-- Service 01 -->
       <article class="svc-card" data-r>
         <div class="svc-num">01</div>
         <div class="svc-icon">🚚</div>
@@ -171,8 +80,6 @@
         <p>Komplette Zustelltouren auf der letzten Meile – täglich, verlässlich, auch kurzfristig buchbar.</p>
         <div class="svc-tags"><span class="tag">Letzte Meile</span><span class="tag">B2B &amp; B2C</span><span class="tag">Kurzfristig</span></div>
       </article>
-
-      <!-- Service 02 -->
       <article class="svc-card" data-r="d1">
         <div class="svc-num">02</div>
         <div class="svc-icon">📦</div>
@@ -180,8 +87,6 @@
         <p>Sorgfältiger Umgang, Scan und Protokollierung nach Ihren Qualitätsvorgaben.</p>
         <div class="svc-tags"><span class="tag">Scan &amp; Track</span><span class="tag">Dokumentiert</span></div>
       </article>
-
-      <!-- Service 03 -->
       <article class="svc-card" data-r="d2">
         <div class="svc-num">03</div>
         <div class="svc-icon">⚡</div>
@@ -189,8 +94,6 @@
         <p>Zeitkritische Sendungen mit Priorität – Same-Day und Next-Day, termingerecht.</p>
         <div class="svc-tags"><span class="tag">Same Day</span><span class="tag">Next Day</span></div>
       </article>
-
-      <!-- Service 04 -->
       <article class="svc-card" data-r>
         <div class="svc-num">04</div>
         <div class="svc-icon">📈</div>
@@ -198,8 +101,6 @@
         <p>Spitzenzeiten, Urlaub, Ausfall – wir springen ein, schnell und unkompliziert.</p>
         <div class="svc-tags"><span class="tag">Skalierbar</span><span class="tag">Saisonal</span></div>
       </article>
-
-      <!-- Service 05 -->
       <article class="svc-card" data-r="d1">
         <div class="svc-num">05</div>
         <div class="svc-icon">📋</div>
@@ -207,8 +108,6 @@
         <p>Vollständige Zustellnachweise, digitale Abwicklung, transparente Rückmeldung.</p>
         <div class="svc-tags"><span class="tag">Digitale PODs</span><span class="tag">Transparent</span></div>
       </article>
-
-      <!-- Service 06 -->
       <article class="svc-card" data-r="d2">
         <div class="svc-num">06</div>
         <div class="svc-icon">🤝</div>
@@ -216,18 +115,12 @@
         <p>Feste Touren, klare Verträge, echter Einsatz – Subunternehmer-Strukturen, die halten.</p>
         <div class="svc-tags"><span class="tag">Feste Touren</span><span class="tag">Vertragspartner</span></div>
       </article>
-
     </div>
   </div>
 </section>
 
-
-<!-- =======================
-     PARTNER SECTION
-======================= -->
 <div id="partner">
-  <p class="p-eyebrow">Erfahrung im KEP-Umfeld u. a.</p>
-
+  <p class="p-eyebrow">Erfahrung im KEP-Umfeld u. a. </p>
   <div class="p-chips">
     <div class="p-chip">GO!</div>
     <div class="p-chip">DHL</div>
@@ -235,252 +128,171 @@
   </div>
 </div>
 
-
-<!-- =======================
-     ADVANTAGES SECTION
-======================= -->
 <section id="vorteile" class="sec">
-
   <div class="sec-inner">
-
     <div class="adv-layout">
-
-      <!-- LEFT TEXT COLUMN -->
       <div>
-
         <div class="eyebrow" data-r>Warum Latta Logistik</div>
-
-        <h2 class="sec-h" data-r>
-          Was uns von<br>anderen unterscheidet
-        </h2>
-
-        <!-- ADVANTAGE LIST -->
+        <h2 class="sec-h" data-r>Was uns von<br>anderen unterscheidet</h2>
         <ul class="adv-list" data-r>
-
           <li class="adv-row">
             <div class="adv-num">01</div>
-            <div>
-              <h4>Lokale Marktkenntnis</h4>
-              <p>Wir kennen Salzgitter und die Region – Straßen, Zeitfenster, Besonderheiten. Das spart Zeit und vermeidet Fehlzustellungen.</p>
-            </div>
+            <div><h4>Lokale Marktkenntnis</h4><p>Wir kennen Salzgitter und die Region – Straßen, Zeitfenster, Besonderheiten. Das spart Zeit und vermeidet Fehlzustellungen.</p></div>
           </li>
-
           <li class="adv-row">
             <div class="adv-num">02</div>
-            <div>
-              <h4>Direkt erreichbar – kein Call-Center</h4>
-              <p>Sie sprechen direkt mit dem Verantwortlichen. Schnelle Reaktion, klare Ansagen, keine Warteschleifen.</p>
-            </div>
+            <div><h4>Direkt erreichbar – kein Call-Center</h4><p>Sie sprechen direkt mit dem Verantwortlichen. Schnelle Reaktion, klare Ansagen, keine Warteschleifen.</p></div>
           </li>
-
           <li class="adv-row">
             <div class="adv-num">03</div>
-            <div>
-              <h4>Skalierbar auf Ihren Bedarf</h4>
-              <p>Heute 2 Fahrzeuge – morgen mehr. Wir wachsen mit Ihren Anforderungen und bauen Kapazität gezielt aus.</p>
-            </div>
+            <div><h4>Skalierbar auf Ihren Bedarf</h4><p>Heute 2 Fahrzeuge – morgen mehr. Wir wachsen mit Ihren Anforderungen und bauen Kapazität gezielt aus.</p></div>
           </li>
-
           <li class="adv-row">
             <div class="adv-num">04</div>
-            <div>
-              <h4>Rechtlich sauber aufgestellt</h4>
-              <p>UG eingetragen, Fahrzeuge versichert, Fahrer gewerblich angemeldet – vollständig nach deutschem Recht.</p>
-            </div>
+            <div><h4>Rechtlich sauber aufgestellt</h4><p>UG eingetragen, Fahrzeuge versichert, Fahrer gewerblich angemeldet – vollständig nach deutschem Recht.</p></div>
           </li>
-
         </ul>
       </div>
-
-      <!-- RIGHT PANEL COMMENTED OUT
-           NOTE:
-           - reserved for future KPI dashboard
-           - safe to re-enable later
-      -->
+  <!-- ###auskommentiert
+     <div class="perf-panel" data-r>
+        <h4>Performance-Übersicht</h4>
+        <div class="p-stat">
+          <div class="p-row"><span class="p-label">Leistung: Last Mile Zustellung</span></div>
+          <div class="p-track"><div class="p-fill" data-w="100%"></div></div>
+        </div>
+        <div class="p-stat">
+          <div class="p-row"><span class="p-label">Einsatzgebiet: Region Niedersachsen</span></div>
+          <div class="p-track"><div class="p-fill" data-w="100%"></div></div>
+        </div>
+        <div class="p-stat">
+          <div class="p-row"><span class="p-label">Verfügbarkeit: Mo – Sa</span></div>
+          <div class="p-track"><div class="p-fill" data-w="100%"></div></div>
+        </div>
+        <div class="fleet-tags">
+          <span class="fleet-tag">🚐 Transporter</span>
+          <span class="fleet-tag">🚚 Kastenwagen</span>
+          <span class="fleet-tag">📱 GPS-Tracking</span>
+        </div>
+      </div>
     </div>
-  </div>
+  </div> -->
 </section>
 
-
-<!-- =======================
-     ABOUT SECTION
-======================= -->
 <section id="ueber-uns" class="sec">
-
   <div class="sec-inner">
-
     <div class="about-layout">
-
-      <!-- TEXT COLUMN -->
       <div class="about-text" data-r>
-
         <div class="eyebrow">Über uns</div>
-
         <h2 class="sec-h">Ein Team,<br>das liefert.</h2>
-
-        <p>Latta Logistik UG ist ein in Deutschland registrierter Subunternehmer im Bereich KEP-Dienstleistungen. Das Unternehmen wurde mit dem Ziel gegründet, operative Zustellkapazitäten bereitzustellen.</p>
-
-        <p>Wir verstehen die Anforderungen des Marktes: enge Zeitfenster, hohe Volumina, Null-Fehler-Toleranz.</p>
-
-        <p>Wir liefern jede Tour nach Ihrem Qualitätsstandard – flexibel und zuverlässig.</p>
-
-        <!-- CERTIFICATION BADGES -->
+        <p> Latta Logistik UG ist ein in Deutschland registrierter Subunternehmer im Bereich KEP-Dienstleistungen. Das Unternehmen wurde mit dem Ziel gegründet, operative Zustellkapazitäten für Logistikdienstleister bereitzustellen.</p>
+        <p>Wir verstehen die Anforderungen des Marktes: enge Zeitfenster, hohe Volumina, Null-Fehler-Toleranz. Deshalb haben wir Prozesse, Team und Fuhrpark von Anfang an darauf ausgerichtet.</p>
+        <p>Unser Anspruch: Jede Tour, die wir übernehmen, läuft so professionell, als wäre es Ihre eigene Mannschaft – mit demselben Qualitätsstandard, aber mit voller Flexibilität für Sie.</p>
         <div class="cert-row">
           <div class="cert">✅ Gewerblich angemeldet</div>
           <div class="cert">🚗 Vollversicherte Flotte</div>
           <div class="cert">📄 UG eingetragen</div>
         </div>
-
       </div>
-
-      <!-- NUMERIC FACTS GRID -->
       <div class="num-grid" data-r>
         <div class="num-card"><div class="big">2<em>+</em></div><small>Fahrzeuge im Einsatz</small></div>
         <div class="num-card"><div class="big">24<em>h</em></div><small>Reaktionszeit</small></div>
         <div class="num-card"><div class="big">Mo–<em>Sa</em></div><small>Einsatzbereit</small></div>
-        <div class="num-card"><div class="big">Last<em>-Mile</em></div><small>Zustellung</small></div>
-        <div class="num-card"><div class="big">Schnelle</div><small>Tourenübernahme</small></div>
-        <div class="num-card"><div class="big">Flexible</div><small>Tourenplanung</small></div>
+        <div class="num-card"><div class="big">Last<em>-Mile</em></div><small> Zustellung</small></div>
+        <div class="num-card"><div class="big">Kurz<em>fristige</em></div><small> Tourenübernahme</small></div>
+        <div class="num-card"><div class="big">Flex<em>ible</em></div><small> Tourenplanung</small></div>
+        
       </div>
-
     </div>
   </div>
 </section>
 
-
-<!-- =======================
-     CONTACT SECTION
-======================= -->
 <section id="kontakt" class="sec">
-
   <div class="sec-inner">
-
-    <div class="eyebrow" data-r>Kontakt & Anfrage</div>
-
+    <div class="eyebrow" data-r>Kontakt &amp; Anfrage</div>
     <h2 class="sec-h" data-r>Sprechen wir.<br>Antwort in 24 Stunden.</h2>
-
     <div class="contact-layout">
-
-      <!-- CONTACT INFO -->
       <div class="c-info" data-r>
-
         <h3>Direkter Kontakt</h3>
-
         <div class="c-row">
           <div class="c-icon">📧</div>
-          <div>
-            <div class="c-label">E-Mail</div>
-            <div class="c-val"><a href="mailto:latta.moh@gmail.com">latta.moh@gmail.com</a></div>
-          </div>
+          <div><div class="c-label">E-Mail</div><div class="c-val"><a href="mailto:latta.moh@gmail.com">latta.moh@gmail.com</a></div></div>
         </div>
-
         <div class="c-row">
           <div class="c-icon">📞</div>
-          <div>
-            <div class="c-label">Telefon</div>
-            <div class="c-val"><a href="tel:+4915771085608">+49 1577 1085608</a></div>
-          </div>
+          <div><div class="c-label">Telefon</div><div class="c-val"><a href="tel:+4915771085608">+49 1577 1085608</a></div></div>
         </div>
-
         <div class="c-row">
           <div class="c-icon">📍</div>
-          <div>
-            <div class="c-label">Geschäftssitz</div>
-            <div class="c-val">Dietrich-Bonhoeffer-Str. 25<br>38228 Salzgitter</div>
-          </div>
+          <div><div class="c-label">Geschäftssitz</div><div class="c-val">Dietrich-Bonhoeffer-Str. 25<br>38228 Salzgitter</div></div>
         </div>
-
         <div class="c-row">
           <div class="c-icon">🕐</div>
-          <div>
-            <div class="c-label">Erreichbarkeit</div>
-            <div class="c-val">Mo – Sa, 7:00 – 19:00 Uhr</div>
-          </div>
+          <div><div class="c-label">Erreichbarkeit</div><div class="c-val">Mo – Sa, 7:00 – 19:00 Uhr</div></div>
         </div>
-
-        <div class="c-promise">Antwort innerhalb von 24 Stunden an Werktagen.</div>
-
+        <div class="c-promise">⚡ Antwort innerhalb von 24 Stunden an Werktagen.</div>
       </div>
 
-      <!-- FORM (CRITICAL: backend dependency Formspree) -->
-      <form id="contact-form"
-            class="c-form"
-            action="https://formspree.io/f/xkokrdov"
-            method="POST"
-            novalidate
-            data-r>
+<!-- ################### Anfragen bearbeiten ##################### -->
+<form id="contact-form" class="c-form"
+      action="https://formspree.io/f/xkokrdov"
+      method="POST"
+      novalidate data-r>
 
-        <h3>Kooperationsanfrage senden</h3>
+  <h3>Kooperationsanfrage senden</h3>
 
-        <!-- FORM ROW 1 -->
-        <div class="f-row">
-          <div class="f-group">
-            <label for="name">Name *</label>
-            <input type="text" id="name" name="name" required />
-          </div>
+  <div class="f-row">
+    <div class="f-group">
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" required placeholder="Max Mustermann" autocomplete="name"/>
+    </div>
 
-          <div class="f-group">
-            <label for="company">Unternehmen</label>
-            <input type="text" id="company" name="company" />
-          </div>
-        </div>
+    <div class="f-group">
+      <label for="company">Unternehmen</label>
+      <input type="text" id="company" name="company" placeholder="Ihre Firma"/>
+    </div>
+  </div>
 
-        <!-- FORM ROW 2 -->
-        <div class="f-row">
-          <div class="f-group">
-            <label for="email">E-Mail *</label>
-            <input type="email" id="email" name="email" required />
-          </div>
+  <div class="f-row">
+    <div class="f-group">
+      <label for="email">E-Mail *</label>
+      <input type="email" id="email" name="email" required placeholder="mail@firma.de" autocomplete="email"/>
+    </div>
 
-          <div class="f-group">
-            <label for="phone">Telefon</label>
-            <input type="tel" id="phone" name="phone" />
-          </div>
-        </div>
+    <div class="f-group">
+      <label for="phone">Telefon</label>
+      <input type="tel" id="phone" name="phone" placeholder="+49 ..." autocomplete="tel"/>
+    </div>
+  </div>
 
-        <!-- FORM SELECT -->
-        <div class="f-group">
-          <label for="interest">Thema</label>
-          <select id="interest" name="interest">
-            <option value="">Bitte auswählen</option>
-            <option value="Subunternehmerschaft / Touren">Subunternehmerschaft / Touren</option>
-            <option value="Kapazitätserweiterung">Kapazitätserweiterung</option>
-            <option value="Sonstiges">Sonstiges</option>
-          </select>
-        </div>
+  <div class="f-group">
+    <label for="interest">Thema</label>
+    <select id="interest" name="interest">
+      <option value="">Bitte auswählen</option>
+      <option value="Subunternehmerschaft / Touren">Subunternehmerschaft / Touren</option>
+      <option value="Kapazitätserweiterung">Kapazitätserweiterung</option>
+      <option value="Sonstiges">Sonstiges</option>
+    </select>
+  </div>
 
-        <!-- MESSAGE -->
-        <div class="f-group">
-          <label for="message">Nachricht *</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
+  <div class="f-group">
+    <label for="message">Nachricht *</label>
+    <textarea id="message" name="message" required placeholder="Region, tägliche Stopps, Zeitraum …"></textarea>
+  </div>
 
-        <!-- SUBMIT -->
-        <button type="submit" class="f-submit">Anfrage absenden →</button>
+  <button type="submit" class="f-submit">Anfrage absenden →</button>
 
-        <p class="f-note">Pflichtfelder · Daten werden vertraulich behandelt</p>
-
-      </form>
-
+  <p class="f-note">* Pflichtfelder · Ihre Daten werden vertraulich behandelt.</p>
+</form>
     </div>
   </div>
 </section>
 
-
-<!-- =======================
-     FOOTER
-======================= -->
 <footer>
-
   <div class="f-grid">
-
-    <!-- BRAND BLOCK -->
     <div class="f-brand">
       <div class="logo">Latta <b>Logistik</b></div>
-      <p>Zuverlässiger Subunternehmer für Paket- und Expresszustellungen in Salzgitter und Niedersachsen.</p>
+      <p>Zuverlässiger Subunternehmer für Paket- und Expresszustellungen in Salzgitter und der Region Niedersachsen.</p>
     </div>
-
-    <!-- NAVIGATION FOOTER -->
     <div class="f-col">
       <h5>Navigation</h5>
       <a href="#leistungen">Leistungen</a>
@@ -488,33 +300,20 @@
       <a href="#ueber-uns">Über uns</a>
       <a href="#kontakt">Kontakt</a>
     </div>
+<div class="f-col">
+  <h5>Rechtliches</h5>
 
-    <!-- LEGAL LINKS -->
-    <div class="f-col">
-      <h5>Rechtliches</h5>
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutzerklärung</a>
-      <a href="agb.html">AGB</a>
-    </div>
-
+  <a href="impressum.html">Impressum</a>
+  <a href="datenschutz.html">Datenschutzerklärung</a>
+  <a href="agb.html">AGB</a>
+</div>
   </div>
-
-  <!-- COPYRIGHT -->
   <div class="f-bottom">
     <p>© <span id="year"></span> Latta Logistik UG · Alle Rechte vorbehalten</p>
     <p>Salzgitter · Niedersachsen</p>
   </div>
-
 </footer>
 
-
-<!-- =======================
-     JAVASCRIPT ENTRY POINT
-     NOTE:
-     - controls nav toggle
-     - scroll animations
-     - year injection
-======================= -->
 <script src="script.js"></script>
 
 </body>
