@@ -173,8 +173,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.42);padding:3rem 4vw 1.75re
 
 /* RESPONSIVE DESIGN */
 /* Suche die @media(max-width:900px) Sektion und ergänze/ersetze: */
-
+#navToggle {
+  display: none;
+}
 @media(max-width:900px){
+
   nav { padding: 0 5vw; }
   .svc-grid {
     grid-template-columns: 1fr;
@@ -299,7 +302,7 @@ header#home {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background: (0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
 
   color: white;
   text-align: center;
@@ -333,10 +336,6 @@ header#home > * {
 
 .legal-page h2 {
   margin-top: 30px;
-}
-/* verhindert Layout-Brüche */
-* {
-  box-sizing: border-box;
 }
 
 /* verhindert seitliches Scrollen */
