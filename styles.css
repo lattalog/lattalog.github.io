@@ -29,7 +29,7 @@ nav{
 .n-cta:hover{background:var(--amber2)!important}
 
 /* HERO SECTION */
-#hero{min-height:100vh;position:relative;display:grid;grid-template-columns:1fr 1fr;background:var(--ink);overflow:hidden}
+#hero{min-height:calc(100vh - 62px);;position:relative;display:grid;grid-template-columns:1fr 1fr;background:var(--ink);overflow:hidden}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:8rem 3vw 5rem 5vw;position:relative;z-index:2}
 #hero::after{content:'';position:absolute;top:0;right:calc(50% - 80px);bottom:0;width:160px;background:var(--ink);clip-path:polygon(100% 0,100% 100%,0 100%,55% 0);z-index:1}
 .hero-right{position:relative;overflow:hidden}
